@@ -34,6 +34,12 @@ class DefaultSuccessView(View):
         return HttpResponse("Slack OAuth login successful.")
 
 
+class DefaultErrorView(View):
+    def get(self, request):
+        messages.error(request, "There's been an error.")
+        return HttpResponse("Slack OAuth login unsuccessful.")
+
+
 class SlackAuthView(RedirectView):
     permanent = True
 
