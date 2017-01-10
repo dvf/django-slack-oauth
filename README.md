@@ -61,9 +61,10 @@ Add a link to Slack OAuth in one of your templates:
 <a href='{% url 'slack_auth' %}'>Get slacked</a>
 ```
 
-After clicking it, you will be redirected to Slack for the OAuth process. If successful, you will be redirected to a view showing a success message. You can change this view by setting `SLACK_SUCCESS_REDIRECT_URL` in `settings.py`.
+After clicking it, you will be redirected to Slack for the OAuth process. If successful, you'll be redirected to a view showing a success message. You can change this view by setting `SLACK_SUCCESS_REDIRECT_URL` in `settings.py`.
+In the case that the authentication is unsuccessful, you'll be redirected to an error page, you may change this page by setting 'SLACK_ERROR_REDIRECT_URL' in `settings.py`.
 
-You can then view the successful request and API data in the Admin under Slack OAuth Requests.
+You can view the successful request and API data in the Admin under Slack OAuth Requests.
 
 
 <br>
